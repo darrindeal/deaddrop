@@ -13,4 +13,9 @@ class TestCase extends BaseTestCase
             DeadDropServiceProvider::class,
         ];
     }
+
+    protected function defineEnvironment($app) 
+    {
+        $app->useStoragePath(realpath(__DIR__.'/../../storage'));
+    }
 }
